@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Screen readers now announce the selected color of `forecolor` and `backcolor` buttons. #TINY-9796
 - Resize handles would not appear on editable images in a non-editable context. #TINY-10118
 - The dialog size was not updated when the `size` argument was changed when redialling a dialog. #TINY-10209
+- Custom block element wasn't considered block element in some case. #TINY-10139
 
 ### Improved
 - Colorpicker now includes the Brightness/Saturation selector and hue slider in the keyboard navigable items. #TINY-9287
