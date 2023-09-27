@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16" height="16" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>icon-ta-plus</title>
+    <desc>Created with Sketch.</desc>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+		<path d="M512 890.688a48 48 0 0 1-48-48V181.312a48 48 0 0 1 96 0v661.376a48 48 0 0 1-48 48z" fill="#000000">
+		</path>
+		<path d="M842.688 560H181.312a48 48 0 0 1 0-96h661.376a48 48 0 0 1 0 96z" fill="#000000">
+		</path>
+	</g>
+</svg>

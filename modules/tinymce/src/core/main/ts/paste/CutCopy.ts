@@ -1,4 +1,4 @@
-import { Fun } from '@ephox/katamari';
+import { Fun, Type } from '@ephox/katamari';
 
 import Editor from '../api/Editor';
 import Env from '../api/Env';
@@ -68,10 +68,16 @@ const fallback = (editor: Editor): FallbackFn => (html, done) => {
   }, 0);
 };
 
-const getData = (editor: Editor): SelectionContentData => ({
-  html: InternalHtml.mark(editor.selection.getContent({ contextual: true })),
-  text: editor.selection.getContent({ format: 'text' })
-});
+const getData = (editor: Editor): SelectionContentData => {
+  let html = editor.selection.getContent({ contextual: true });
+  let text = editor.selection.getContent({ format: 'text' });
+  const preProcess = editor.options.get('copy_pre_process');
+  if (Type.isFunction(preProcess)) {
+    html = preProcess(html);
+    text = preProcess(text);
+  }
+  return { html: InternalHtml.mark(html), text };
+};
 
 const isTableSelection = (editor: Editor): boolean =>
   !!editor.dom.getParent(editor.selection.getStart(), 'td[data-mce-selected],th[data-mce-selected]', editor.getBody());

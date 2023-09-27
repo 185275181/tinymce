@@ -827,6 +827,10 @@ const register = (editor: Editor): void => {
     default: ''
   });
 
+  registerOption('copy_pre_process', {
+    processor: 'function'
+  });
+
   // These options must be registered later in the init sequence due to their default values
   editor.on('ScriptsLoaded', () => {
     registerOption('directionality', {
